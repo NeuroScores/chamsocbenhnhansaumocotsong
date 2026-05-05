@@ -225,6 +225,13 @@ function showTab(tab, el){
 
 /* AUTO LOAD TAB THEO QR */
 if(window.location.hash === "#home"){
+  const el = document.querySelectorAll('.tab')[1];
+  showTab('home', el);
+}
+</script>
+
+/* AUTO LOAD TAB THEO QR */
+if(window.location.hash === "#home"){
   showTab('home');
 }
 </script>
