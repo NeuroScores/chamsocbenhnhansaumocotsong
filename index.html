@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HƯỚNG DẪN CHĂM SÓC BỆNH NHÂN SAU PHẪU THUẬT CỘT SỐNG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family: 'Inter', sans-serif;
+  margin:0;
+  background:#f4f8fb;
+}
+
+/* HEADER */
+.header{
+  background:linear-gradient(135deg,#0b5ed7,#0dcaf0);
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* TAB */
+.tabs{
+  display:flex;
+  background:white;
+  position:sticky;
+  top:0;
+}
+.tab{
+  flex:1;
+  text-align:center;
+  padding:12px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.tab.active{
+  background:#0b5ed7;
+  color:white;
+}
+
+/* CONTENT */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:15px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  padding:15px;
+  margin-bottom:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+h2{color:#0b5ed7}
+
+/* VIDEO */
+iframe{
+  width:100%;
+  height:250px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* WARNING */
+.warning{
+  background:#ffe5e5;
+  border-left:6px solid red;
+}
+
+/* HIDE */
+.hidden{display:none}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>HƯỚNG DẪN CHĂM SÓC BỆNH NHÂN SAU PHẪU THUẬT CỘT SỐNG</h1>
+<p>Phục hồi an toàn – tránh biến chứng</p>
+</div>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('inpatient')">🏥 Khi nằm viện</div>
+<div class="tab" onclick="showTab('home')">🏠 Cẩm nang sau ra viện</div>
+</div>
+
+<div class="container">
+
+<!-- TAB 1 -->
+
+<div id="inpatient">
+
+<div class="card">
+<h2>🎥 Tập vận động</h2>
+
+<p>Xoay trở trên giường</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7k4JiWYmh3A?si=eb8e68Z6YNEvR3qr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Lên xuống giường</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ii02PbMFgLQ?si=eBf2n_4GCnybTTLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Ngồi ghế</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6xkaA4PmJfg?si=NX87hGm3Ygic7ZSt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Mặc quần áo</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T4ZI-g_u684?si=Ijbw5JTo6esYhLoi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h2>⏱ Khi nào tập</h2>
+<ul>
+<li>0–48 giờ: xoay trở tại giường</li>
+<li>Ngày 2–5: tập ngồi, đứng</li>
+<li>Sau đó: tập đi</li>
+</ul>
+<img src="buocdi.jpg" width="100%">
+</div>
+
+<div class="card">
+<h2> Chăm sóc vết mổ</h2>
+<ul>
+<li>Giữ sạch, khô</li>
+<li>Không tự ý bôi thuốc</li>
+<li>Theo dõi sưng, đỏ</li>
+</ul>
+<img src="poster_vetmo.jpg" width="100%">
+</div>
+
+</div>
+
+<!-- TAB 2 -->
+
+<div id="home" class="hidden">
+
+<div class="card">
+<h2>🚫 Động tác cần tránh</h2>
+<ul>
+<li>Không cúi gập</li>
+<li>Không xoay người</li>
+<li>Không mang nặng</li>
+</ul>
+<img src="poster_tranh.jpg" width="100%">
+</div>
+
+<div class="card warning">
+<h2>🔴 Dấu hiệu nguy hiểm</h2>
+<ul>
+<li>Yếu chân</li>
+<li>Đau tăng</li>
+<li>Sốt</li>
+<li>Chảy dịch</li>
+</ul>
+<p><b>→ Quay lại bệnh viện ngay</b></p>
+<img src="poster_nguyhiem.jpg" width="100%">
+</div>
+
+<div class="card">
+<h2> Đai lưng</h2>
+<ul>
+<li>Đeo theo hướng dẫn</li>
+<li>Không đeo quá chặt</li>
+<li>Không lạm dụng</li>
+</ul>
+<img src="poster_dailung.jpg" width="100%">
+</div>
+<div class="card">
+<h2>Lộ trình chi tiết</h2>
+<img src="sodo.jpg" width="100%">
+</div>
+
+</div>
+
+</div>
+
+<script>
+function showTab(tab){
+  document.getElementById('inpatient').classList.add('hidden');
+  document.getElementById('home').classList.add('hidden');
+
+  document.getElementById(tab).classList.remove('hidden');
+
+  let tabs=document.querySelectorAll('.tab');
+  tabs.forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+/* AUTO LOAD TAB THEO QR */
+if(window.location.hash === "#home"){
+  showTab('home');
+}
+</script>
+
+</body>
+</html>
