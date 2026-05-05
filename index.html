@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="vi">
 <head>
@@ -211,7 +211,7 @@ iframe{
 </div>
 
 <script>
-function showTab(tab, el){
+function showTab(tab){
   document.getElementById('inpatient').classList.add('hidden');
   document.getElementById('home').classList.add('hidden');
 
@@ -219,16 +219,8 @@ function showTab(tab, el){
 
   let tabs=document.querySelectorAll('.tab');
   tabs.forEach(t=>t.classList.remove('active'));
-
-  el.classList.add('active');
+  event.target.classList.add('active');
 }
-
-/* AUTO LOAD TAB THEO QR */
-if(window.location.hash === "#home"){
-  const el = document.querySelectorAll('.tab')[1];
-  showTab('home', el);
-}
-</script>
 
 /* AUTO LOAD TAB THEO QR */
 if(window.location.hash === "#home"){
