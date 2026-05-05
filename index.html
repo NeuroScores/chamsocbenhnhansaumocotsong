@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HƯỚNG DẪN CHĂM SÓC BỆNH NHÂN SAU PHẪU THUẬT CỘT SỐNG</title>
+<title>HƯỚNG DẪN CHĂM SÓC NGƯỜI BỆNH SAU PHẪU THUẬT CỘT SỐNG</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -15,21 +14,20 @@ body{
   background:#f4f8fb;
 }
 
-/* HEADER */
 .header{
   background:linear-gradient(135deg,#0b5ed7,#0dcaf0);
   color:white;
   text-align:center;
-  padding:30px;
+  padding:20px;
 }
 
-/* TAB */
 .tabs{
   display:flex;
   background:white;
   position:sticky;
   top:0;
 }
+
 .tab{
   flex:1;
   text-align:center;
@@ -37,12 +35,12 @@ body{
   cursor:pointer;
   font-weight:bold;
 }
+
 .tab.active{
   background:#0b5ed7;
   color:white;
 }
 
-/* CONTENT */
 .container{
   max-width:900px;
   margin:auto;
@@ -59,96 +57,73 @@ body{
 
 h2{color:#0b5ed7}
 
-/* VIDEO */
-iframe{
-  width:100%;
-  height:250px;
-  border-radius:10px;
-  margin-top:10px;
-}
-
-/* WARNING */
 .warning{
   background:#ffe5e5;
   border-left:6px solid red;
 }
 
-/* HIDE */
-.hidden{display:none}
+/* video */
+.video{
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  margin-top:10px;
+}
+.video iframe{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:12px;
+}
 </style>
-
 </head>
 
 <body>
 
 <div class="header">
-<h1>HƯỚNG DẪN CHĂM SÓC BỆNH NHÂN SAU PHẪU THUẬT CỘT SỐNG</h1>
+<h1>HƯỚNG DẪN CHĂM SÓC NGƯỜI BỆNH SAU PHẪU THUẬT CỘT SỐNG</h1>
 <p>Phục hồi an toàn – tránh biến chứng</p>
 </div>
 
 <div class="tabs">
-<div class="tab active" onclick="showTab('inpatient')">🏥 Khi nằm viện</div>
-<div class="tab" onclick="showTab('home')">🏠 Cẩm nang sau ra viện</div>
+<div class="tab active" onclick="showTab('inpatient', this)">🏥 Khi nằm viện</div>
+<div class="tab" onclick="showTab('home', this)">🏠 Sau ra viện</div>
 </div>
 
 <div class="container">
 
 <!-- TAB 1 -->
-
 <div id="inpatient">
 
 <div class="card">
 <h2>🎥 Tập vận động</h2>
 
-<p>Xoay trở trên giường</p>
-  <div style="max-width: 700px; margin: 20px auto;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/7k4JiWYmh3A?si=eb8e68Z6YNEvR3qr"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
+<p>Xoay trở tại giường</p>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/7k4JiWYmh3A" allowfullscreen></iframe>
 </div>
+
 <p>Lên xuống giường</p>
-<div style="max-width: 700px; margin: 20px auto;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/ii02PbMFgLQ?si=eBf2n_4GCnybTTLM"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/ii02PbMFgLQ" allowfullscreen></iframe>
 </div>
+
 <p>Ngồi ghế</p>
-<div style="max-width: 700px; margin: 20px auto;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/6xkaA4PmJfg?si=NX87hGm3Ygic7ZSt"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/6xkaA4PmJfg" allowfullscreen></iframe>
 </div>
+
 <p>Mặc quần áo</p>
-<div style="max-width: 700px; margin: 20px auto;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/T4ZI-g_u684?si=Ijbw5JTo6esYhLoi"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/T4ZI-g_u684" allowfullscreen></iframe>
 </div>
+</div>
+
 <div class="card">
 <h2>⏱ Khi nào tập</h2>
 <ul>
-<li>0–48 giờ: xoay trở tại giường</li>
-<li>Ngày 2–5: tập ngồi, đứng</li>
+<li>0–48 giờ: xoay trở</li>
+<li>Ngày 2–5: ngồi, đứng</li>
 <li>Sau đó: tập đi</li>
 </ul>
 <img src="buocdi.jpg" width="100%">
@@ -157,9 +132,9 @@ iframe{
 <div class="card">
 <h2> Chăm sóc vết mổ</h2>
 <ul>
-<li>Giữ sạch, khô</li>
-<li>Không tự ý bôi thuốc</li>
-<li>Theo dõi sưng, đỏ</li>
+<li>Giữ vết mổ khô, sạch</li>
+<li>Không tự ý tháo băng</li>
+<li>Theo dõi sưng, đỏ, chảy dịch</li>
 </ul>
 <img src="poster_vetmo.jpg" width="100%">
 </div>
@@ -167,8 +142,7 @@ iframe{
 </div>
 
 <!-- TAB 2 -->
-
-<div id="home" class="hidden">
+<div id="home" style="display:none;">
 
 <div class="card">
 <h2>🚫 Động tác cần tránh</h2>
@@ -188,21 +162,22 @@ iframe{
 <li>Sốt</li>
 <li>Chảy dịch</li>
 </ul>
-<p><b>→ Quay lại bệnh viện ngay</b></p>
+<p><b>→ Đi khám ngay</b></p>
 <img src="poster_nguyhiem.jpg" width="100%">
 </div>
 
 <div class="card">
-<h2> Đai lưng</h2>
+<h2>Sử dụng đai lưng đúng cách</h2>
 <ul>
-<li>Đeo theo hướng dẫn</li>
-<li>Không đeo quá chặt</li>
-<li>Không lạm dụng</li>
+<li>Đeo theo hướng dẫn bác sĩ</li>
+<li>Không siết quá chặt</li>
+<li>Không lạm dụng lâu dài</li>
 </ul>
 <img src="poster_dailung.jpg" width="100%">
 </div>
+
 <div class="card">
-<h2>Lộ trình chi tiết</h2>
+<h2>📊 Lộ trình phục hồi</h2>
 <img src="sodo.jpg" width="100%">
 </div>
 
@@ -211,20 +186,20 @@ iframe{
 </div>
 
 <script>
-function showTab(tab){
-  document.getElementById('inpatient').classList.add('hidden');
-  document.getElementById('home').classList.add('hidden');
+function showTab(tab, el){
+  document.getElementById('inpatient').style.display = 'none';
+  document.getElementById('home').style.display = 'none';
 
-  document.getElementById(tab).classList.remove('hidden');
+  document.getElementById(tab).style.display = 'block';
 
-  let tabs=document.querySelectorAll('.tab');
-  tabs.forEach(t=>t.classList.remove('active'));
-  event.target.classList.add('active');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
 }
 
-/* AUTO LOAD TAB THEO QR */
-if(window.location.hash === "#home"){
-  showTab('home');
+window.onload = function(){
+  if(location.hash === "#home"){
+    showTab('home', document.querySelectorAll('.tab')[1]);
+  }
 }
 </script>
 
