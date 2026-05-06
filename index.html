@@ -1,6 +1,88 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <style>
+    /* Container chính nằm cố định ở góc phải */
+    .fixed-contact-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Chữ "Liên hệ" nhỏ phía trên icon */
+    .contact-label {
+        margin: 0;
+        font-size: 13px;
+        font-weight: bold;
+        color: #444;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 2px 8px;
+        border-radius: 10px;
+    }
+
+    /* Sắp xếp các icon theo hàng dọc */
+    .contact-icons-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .floating-icon img {
+        width: 50px; /* Kích thước icon vừa phải cho web */
+        height: 50px;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        transition: transform 0.3s ease;
+    }
+
+    /* Hiệu ứng nhấp nháy thu hút sự chú ý */
+    .floating-icon {
+        animation: heartBeat 2s infinite;
+    }
+
+    /* Messenger nhấp nháy sau Facebook một chút cho sinh động */
+    .msg {
+        animation-delay: 0.5s;
+    }
+
+    @keyframes heartBeat {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.15); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Hiệu ứng khi di chuột vào */
+    .floating-icon:hover {
+        animation-play-state: paused; /* Dừng nhấp nháy khi đang hover */
+    }
+
+    .floating-icon:hover img {
+        transform: scale(1.2) translateY(-5px);
+        filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+    }
+
+    /* Responsive cho điện thoại (nhỏ lại một chút) */
+    @media (max-width: 768px) {
+        .fixed-contact-container {
+            bottom: 15px;
+            right: 15px;
+        }
+        .floating-icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .contact-label {
+            font-size: 11px;
+        }
+    }
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HƯỚNG DẪN CHĂM SÓC NGƯỜI BỆNH SAU PHẪU THUẬT CỘT SỐNG</title>
@@ -201,6 +283,19 @@ window.onload = function(){
   }
 }
 </script>
-
+<!-- Cấu trúc liên hệ cố định góc dưới phải -->
+<div class="fixed-contact-container">
+    <p class="contact-label">Liên hệ</p>
+    <div class="contact-icons-stack">
+        <!-- Icon Messenger -->
+        <a href="https://m.me/ngoaitkcsbvdkqn" target="_blank" class="floating-icon msg" title="Chat với khoa qua Messenger">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="Messenger">
+        </a>
+        <!-- Icon Facebook -->
+        <a href="https://www.facebook.com/ngoaitkcsbvdkqn" target="_blank" class="floating-icon fb" title="Ghé thăm Fanpage của khoa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+        </a>
+    </div>
+</div>
 </body>
 </html>
